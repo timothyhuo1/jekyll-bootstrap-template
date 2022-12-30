@@ -1,0 +1,17 @@
+.menu {
+  padding: 20px;
+  @include size(100%, 100%);
+
+  .menu-header{
+    @include laptop{
+      font-size: $h3;
+    }
+  }
+  .menu-picture {
+      @include flex(column, center, center);
+      @include size(90%, 90%);
+      img {
+        @include size(100%, 100%);
+      }
+  }
+}

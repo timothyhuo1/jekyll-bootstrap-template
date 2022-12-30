@@ -1,0 +1,40 @@
+.home {
+  @include flex(column, center, center);
+
+
+  .home-banner {
+    @include flex(column, center, center);
+    @include background("/assets/images/home/bg.png", no-repeat, cover);
+    @include size(100%, 350px);
+    color: white;
+
+    @include laptop{
+      height: 500px;
+      text-align: center;
+    }
+  }
+
+  .home-specialize {
+    @include flex(row, space-around, center);
+    @include size(100%, 100%);
+    color: white;
+    margin: 50px;
+    background-color: $blue;
+
+    @include laptop{
+      @include flex(column, center, center);
+      margin: 50px 0px;
+    }
+  }
+
+  .home-specialize-item {
+    padding: 20px;
+    @include flex(column, center, center);
+    color: white;
+
+    img {
+      @include size(300px, 300px);
+      border-radius: 100%;
+    }
+  }
+}

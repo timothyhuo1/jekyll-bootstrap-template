@@ -1,0 +1,25 @@
+.about {
+  @include flex(column, center, center);
+
+
+  .about-banner {
+    @include flex(column, center, center);
+    @include background("/assets/images/about/banner.png", no-repeat, cover);
+    @include size(100%, 350px);
+    color: white;
+  }
+
+  .about-description {
+    padding: 50px;
+    color: black;
+    @include size(80%, 100%);
+    @include flex(column, center, center);
+
+    img {
+      @include size(700px, 500px);
+      @include laptop {
+        @include size(500px, 350px);
+      }
+    }
+  }
+}
